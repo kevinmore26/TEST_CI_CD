@@ -9,13 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Validame el repostorio
-      uses: actions/checkout@v2
+        uses: actions/checkout@v2
     
       - name: Validar ython
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.9.6'
-        architecture: 'x64'
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9.6'
+          architecture: 'x64'
     
       - name: Instalar librerías
         run: pip3 install -r requirements.txt
