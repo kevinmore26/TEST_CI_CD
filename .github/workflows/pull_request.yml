@@ -3,7 +3,7 @@ name : workflow-pull-request
 on:
   pull_request:
     branches:
-      -main
+      - main
 jobs:
   build_and_test:
     runs-on: ubuntu-latest
@@ -14,11 +14,11 @@ jobs:
     - name: Validar ython
       uses: actions/setup-python@v2
       with:
-      python-version: '3.9.6'
-      architecture: 'x64'
+        python-version: '3.9.6'
+        architecture: 'x64'
     
     - name: Instalar librerías
-      uses: pip3 install -r requirements.txt
+      run: pip3 install -r requirements.txt
 
     - name: Correr los Tests
-      uses: python3 -m unittest -v
+      run: python3 -m unittest -v
