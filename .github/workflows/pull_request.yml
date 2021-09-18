@@ -11,7 +11,7 @@ jobs:
       - name: Validame el repostorio
         uses: actions/checkout@v2
     
-      - name: Validar ython
+      - name: Validar Python
         uses: actions/setup-python@v2
         with:
           python-version: '3.9.6'
