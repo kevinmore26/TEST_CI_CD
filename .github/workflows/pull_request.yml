@@ -1,4 +1,4 @@
-name :workflow-pull-request
+name: workflow-pull-request
 
 on:
   pull_request:
@@ -6,12 +6,12 @@ on:
       -main
 jobs:
   build_and_test:
-    runs-on:ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
     - name: Validame el repostorio
       uses: actions/checkout@v2
     
-    -name: Validar Python
+    - name: Validar Python
       uses: actions/setup-python@v2
       with:
         python-version: '3.9.6'
@@ -20,5 +20,5 @@ jobs:
     - name: Instalar librerías
       uses: pip3 install -r requirements.txt
 
-    -name: Correr los Tests
+    - name: Correr los Tests
       uses: python3 -m unittest -v
