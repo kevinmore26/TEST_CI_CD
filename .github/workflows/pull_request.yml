@@ -3,7 +3,7 @@ name: workflow-pull-request
 on:
   pull_request:
     branches:
-      -main
+      - master
 jobs:
   build_and_test:
     runs-on: ubuntu-latest
